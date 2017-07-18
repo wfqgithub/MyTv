@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_action_dark_filter.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\ic_action_dark_filter.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_action_dark_settings.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\ic_action_dark_settings.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_action_dark_aspect_ratio.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\ic_action_dark_aspect_ratio.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\scrubber_control_normal_holo.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\scrubber_control_normal_holo.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\live_room_seek_bar_point.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\live_room_seek_bar_point.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\live_room_audio.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\live_room_audio.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\scrubber_secondary_holo.9.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\scrubber_secondary_holo.9.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\scrubber_control_pressed_holo.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\scrubber_control_pressed_holo.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\scrubber_control_focused_holo.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\scrubber_control_focused_holo.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_theme_play_arrow.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\ic_theme_play_arrow.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_theme_description.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\ic_theme_description.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\scrubber_control_disabled_holo.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\scrubber_control_disabled_holo.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_theme_folder.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\ic_theme_folder.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\scrubber_track_holo_dark.9.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\scrubber_track_holo_dark.9.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\scrubber_primary_holo.9.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-xxhdpi\\scrubber_primary_holo.9.png"
+    }
+]

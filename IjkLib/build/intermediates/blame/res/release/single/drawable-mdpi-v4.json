@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_theme_description.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-mdpi\\ic_theme_description.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_theme_folder.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-mdpi\\ic_theme_folder.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_action_dark_settings.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-mdpi\\ic_action_dark_settings.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_theme_play_arrow.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-mdpi\\ic_theme_play_arrow.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_action_dark_filter.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-mdpi\\ic_action_dark_filter.png"
+    },
+    {
+        "merged": "D:\\workspace2\\MyTv\\IjkLib\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_action_dark_aspect_ratio.png",
+        "source": "D:\\workspace2\\MyTv\\IjkLib\\src\\main\\res\\drawable-mdpi\\ic_action_dark_aspect_ratio.png"
+    }
+]
