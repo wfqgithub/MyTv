@@ -10,6 +10,7 @@ public class TvInfo extends BmobObject {
 
     private String name;
     private String url;
+    private String type;
 
     public String getName() {
         return name;
@@ -27,11 +28,20 @@ public class TvInfo extends BmobObject {
         this.url = url;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "TvInfo{" +
                 "name='" + name + '\'' +
                 ", url='" + url + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

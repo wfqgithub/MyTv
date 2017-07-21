@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
     <ImageView
         android:id="@+id/iv_background"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:scaleType="centerCrop"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"/>
 
     <RelativeLayout
         android:id="@+id/rll_options"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:paddingTop="4dip"
         android:layout_above="@+id/ijkLib__relativeLayout"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:paddingTop="4dip">
 
         <ImageView
             android:id="@+id/mediacontroller_play_pause"
@@ -26,15 +26,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:background="#00000000" />
+            android:background="#00000000"/>
+
+        <ImageView
+            android:id="@+id/mediacontroller_full_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_full_screen"
+            android:background="#00000000"
+            android:gravity="center"
+        ></ImageView>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/ijkLib__relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/ijkLib__relativeLayout">
+        android:layout_alignParentBottom="true">
 
         <TextView
             android:id="@+id/mediacontroller_time_current"
@@ -44,7 +54,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:paddingLeft="4dip"
-            android:paddingRight="4dip" />
+            android:paddingRight="4dip"/>
 
 
         <SeekBar
@@ -57,7 +67,7 @@
             android:layout_toRightOf="@+id/mediacontroller_time_current"
             android:focusable="true"
             android:max="1000"
-            android:thumb="@drawable/live_room_seek_bar_point" />
+            android:thumb="@drawable/live_room_seek_bar_point"/>
 
 
         <TextView
@@ -68,7 +78,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:paddingLeft="4dip"
-            android:paddingRight="4dip" />
+            android:paddingRight="4dip"/>
+
     </RelativeLayout>
 
 
@@ -83,7 +94,7 @@
         android:background="#00000000"
         android:gravity="center"
         android:text="faster"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/slower"
@@ -96,7 +107,7 @@
         android:background="#00000000"
         android:gravity="center"
         android:text="slower"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/normal"
@@ -109,7 +120,7 @@
         android:background="#00000000"
         android:gravity="center"
         android:text="normal"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
 
 </RelativeLayout>

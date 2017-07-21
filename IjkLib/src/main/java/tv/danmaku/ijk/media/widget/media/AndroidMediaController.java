@@ -16,7 +16,9 @@
 
 package tv.danmaku.ijk.media.widget.media;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -28,6 +30,7 @@ import java.util.ArrayList;
 
 public class AndroidMediaController extends PlayerMediaController implements IMediaController {
     private ActionBar mActionBar;
+    Context context;
 
     public AndroidMediaController(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -45,6 +48,7 @@ public class AndroidMediaController extends PlayerMediaController implements IMe
     }
 
     protected void initView(Context context) {
+        this.context = context;
     }
 
     public void setSupportActionBar(@Nullable ActionBar actionBar) {

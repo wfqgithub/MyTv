@@ -2,33 +2,50 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Import" />
+            android:id="@+id/nav_movie"
+            android:icon="@mipmap/ic_logo"
+            android:title="电影轮播" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Gallery" />
+            android:id="@+id/nav_local"
+            android:icon="@mipmap/ic_logo"
+            android:title="地方台" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Slideshow" />
+            android:id="@+id/nav_foreign"
+            android:icon="@mipmap/ic_logo"
+            android:title="海外" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Tools" />
+            android:id="@+id/nav_tv"
+            android:icon="@mipmap/ic_logo"
+            android:title="电视剧" />
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@mipmap/ic_logo"
+            android:title="音乐轮播" />
+        <item
+            android:id="@+id/nav_hk"
+            android:icon="@mipmap/ic_logo"
+            android:title="港澳台" />
+        <item
+            android:id="@+id/nav_cr"
+            android:icon="@mipmap/ic_logo"
+            android:title="成人台" />
+        <item
+            android:id="@+id/nav_test"
+            android:icon="@mipmap/ic_logo"
+            android:title="测试频道" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="设置">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@mipmap/ic_launcher"
-                android:title="Share" />
+                android:icon="@mipmap/ic_logo"
+                android:title="更新" />
             <item
                 android:id="@+id/nav_send"
-                android:icon="@mipmap/ic_launcher"
-                android:title="Send" />
+                android:icon="@mipmap/ic_logo"
+                android:title="关于我们" />
         </menu>
     </item>
 </menu>

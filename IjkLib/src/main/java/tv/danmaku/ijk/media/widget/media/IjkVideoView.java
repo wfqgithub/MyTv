@@ -2,6 +2,7 @@ package tv.danmaku.ijk.media.widget.media;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -15,6 +16,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.MediaController;
 
@@ -58,14 +60,16 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
             IRenderView.AR_16_9_FIT_PARENT,
             IRenderView.AR_4_3_FIT_PARENT};
     private int mVideoRotationDegree;
-    private int mCurrentAspectRatio = s_allAspectRatio[1];
+    private int mCurrentAspectRatio = s_allAspectRatio[0];
     private int mSeekWhenPrepared = 0;
 
     private boolean mCanPause = true;
     private boolean mCanSeekBack = true;
     private boolean mCanSeekForward = true;
+    private View loadingView;
 
     private void init(Context context, AttributeSet attrs) {
+        screenType();
         createRender();
     }
 
@@ -84,6 +88,18 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
         ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "fflags", 0);
         ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "probsize", 4096);
         return ijkMediaPlayer;
+    }
+
+    private void screenType(){
+//        WindowManager wm = (WindowManager) getContext()
+//                .getSystemService(Context.WINDOW_SERVICE);
+//        int width = wm.getDefaultDisplay().getWidth();
+//        int height = wm.getDefaultDisplay().getHeight();
+//        if(width>height){
+//            mCurrentAspectRatio = s_allAspectRatio[1];
+//        }else{
+//            mCurrentAspectRatio = s_allAspectRatio[0];
+//        }
     }
 
     public void createRender() {
@@ -127,13 +143,30 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
         addView(renderUIView);
         mRenderView.addRenderCallback(mSHCallback);
         mRenderView.setVideoRotation(mVideoRotationDegree);
+        showLoading(true);
+    }
+
+    private void showLoading(boolean show){
+        if(loadingView!=null){
+            if(show){
+                loadingView.setVisibility(View.VISIBLE);
+            }else{
+                loadingView.setVisibility(View.GONE);
+            }
+        }
+    }
+
+    public void setLoadingView(View mView){
+        loadingView = mView;
     }
 
     @Override
     public void start() {
+        Log.e("fuck","currentState = "+mCurrentState);
         if (isInPlaybackState()) {
             mMediaPlayer.start();
             mCurrentState = STATE_PLAYING;
+            showLoading(false);
         }
         mTargetState = STATE_PLAYING;
     }
@@ -268,6 +301,8 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
             mMediaPlayer.prepareAsync();
             mCurrentState = STATE_PREPARING;
         } catch (Exception ex) {
+            Log.e(TAG,"EXCEPTION = ");
+            ex.printStackTrace();
             mCurrentState = STATE_ERROR;
             mTargetState = STATE_ERROR;
             mErrorListener.onError(mMediaPlayer, MediaPlayer.MEDIA_ERROR_UNKNOWN, 0);
@@ -453,6 +488,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
             if (mOnPreparedListener != null) {
                 mOnPreparedListener.onPrepared(mMediaPlayer);
             }
+            start();
         }
     };
 
@@ -524,7 +560,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
     private IMediaPlayer.OnErrorListener mErrorListener =
             new IMediaPlayer.OnErrorListener() {
                 public boolean onError(IMediaPlayer mp, int framework_err, int impl_err) {
-                    Log.d(TAG, "Error: " + framework_err + "," + impl_err);
+                    Log.e(TAG, "Error: " + framework_err + "," + impl_err);
                     mCurrentState = STATE_ERROR;
                     mTargetState = STATE_ERROR;
                     if (mMediaController != null) {
@@ -565,6 +601,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
                                 .setCancelable(false)
                                 .show();
                     }
+                    showLoading(false);
                     return true;
                 }
             };
@@ -739,4 +776,5 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
     public IMediaPlayer getMediaPlayer() {
         return mMediaPlayer;
     }
+
 }

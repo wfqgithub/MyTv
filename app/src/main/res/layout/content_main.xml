@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.vincent.mytv.MainActivity"
-    android:background="#FFFFFF"
+    android:background="@color/color_gray"
     tools:showIn="@layout/activity_main">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_tvlist" android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </android.support.v7.widget.RecyclerView>
 
+    <include layout="@layout/layout_load_error"></include>
 </RelativeLayout>

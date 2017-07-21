@@ -2,6 +2,7 @@ package tv.danmaku.ijk.media.widget.media;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.os.Handler;
 import android.os.Message;
@@ -44,7 +45,7 @@ public class PlayerMediaController extends FrameLayout {
     private boolean mFromXml;
     StringBuilder mFormatBuilder;
     Formatter mFormatter;
-    protected ImageView mPauseButton;
+    protected ImageView mPauseButton,mFullScreenButton;
     protected static int IC_MEDIA_PAUSE_ID = Resources.getSystem().getIdentifier("ic_media_pause", "drawable", "android");
     protected static int IC_MEDIA_PLAY_ID = Resources.getSystem().getIdentifier("ic_media_play", "drawable", "android");
 
@@ -155,9 +156,14 @@ public class PlayerMediaController extends FrameLayout {
 
     protected void initControllerView(View v) {
         mPauseButton = (ImageView) v.findViewById(R.id.mediacontroller_play_pause);
+        mFullScreenButton = (ImageView) v.findViewById(R.id.mediacontroller_full_screen);
         if (mPauseButton != null) {
             mPauseButton.requestFocus();
             mPauseButton.setOnClickListener(mPauseListener);
+        }
+        if(mFullScreenButton !=null){
+            mFullScreenButton.requestFocus();
+            mFullScreenButton.setOnClickListener(mPauseListener);
         }
 
 
@@ -412,10 +418,16 @@ public class PlayerMediaController extends FrameLayout {
     private final OnClickListener mPauseListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            doPauseResume();
-            show(sDefaultTimeout);
+            int id = v.getId();
+            if(id == mPauseButton.getId()){
+                doPauseResume();
+                show(sDefaultTimeout);
+            }else if (id == mFullScreenButton.getId()){
+                setOrientation(getResources().getConfiguration().orientation);
+            }
         }
     };
+
 
     private void updatePausePlay() {
         if (mRoot == null || mPauseButton == null)
@@ -516,5 +528,14 @@ public class PlayerMediaController extends FrameLayout {
 
     public void setDefaultTimeout(int sDefaultTimeout) {
         this.sDefaultTimeout = sDefaultTimeout;
+    }
+
+
+    private void setOrientation(int orientation) {
+        if (orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+            ((Activity) getContext()).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        } else {
+            ((Activity) getContext()).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
     }
 }
